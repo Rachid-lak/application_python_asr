@@ -1,7 +1,7 @@
 pipeline{ 
     environment {
         registry = 'rachidias/application_python_asr'
-        registryCredential = 'dockerhub'
+        registryCredential = 'Dockerhub'
         dockerImage = ''
     }
     agent any
