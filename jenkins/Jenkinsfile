@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "rachidias/Application_python_asr"
+    registry = "rachidias/application_python_asr"
     registryCredential = 'rachidias'
     dockerImage = 'flask_python'
      }
