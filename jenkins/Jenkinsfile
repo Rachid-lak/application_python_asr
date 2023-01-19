@@ -1,9 +1,4 @@
-pipeline {
-  environment {
-    registry = "rachidias/application_python_asr"
-    registryCredential = 'rachidias'
-    dockerImage = 'flask_python'
-     }
+pipelin{
     agent any
     stages {
       stage('Building our image') {
