@@ -1,12 +1,8 @@
-pipeline{
-       environment {
-
-        registre  =  "rachidias/application_python_asr" 
-
-         RegistryCredential = '  dockerhub ' 
-
-        dockerImage  =  '' 
-
+pipeline{ 
+    environment {
+        registry = 'rachidias/application_python_asr'
+        registryCredential = 'dockerhub'
+        dockerImage = ''
     }
     agent any
     stages {
