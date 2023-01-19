@@ -1,5 +1,5 @@
 pipeline{
-       environnement {
+       environment {
 
         registre  =  "rachidias/application_python_asr" 
 
