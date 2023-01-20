@@ -1,9 +1,7 @@
 pipeline{ 
    
 stages{
-  stage('SCM') {
-    checkout scm
-          }
+  
     stage('SonarQube Analysis') {
        def scannerHome = tool 'SonarQubeScanner';
        withSonarQubeEnv() {
