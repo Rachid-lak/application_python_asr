@@ -1,18 +1,7 @@
 pipeline{ 
-    environment {
-        registry = 'rachidias/application_python_asr'
-        registryCredential = 'Dockerhub'
-        dockerImage = ''
-    }
-  
-   agent any
-    stages {
    
-
-    stage('sonarqube'){
-
-         node {
-    stage('SCM') {
+stages{
+  stage('SCM') {
     checkout scm
           }
     stage('SonarQube Analysis') {
@@ -21,9 +10,6 @@ pipeline{
       sh "${scannerHome}/bin/sonar-scanner"
           }
         }
-     }
-
-  }
- }
+   }
     
 }
