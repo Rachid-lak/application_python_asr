@@ -5,8 +5,8 @@ stages{
     stage('SonarQube Analysis') {
      agent any
        steps{
-       def scannerHome = tool 'SonarQubeScanner';
-       withSonarQubeEnv() {
+      
+       withSonarQubeEnv( 'SonarQubeScanner') {
        sh "${scannerHome}/bin/sonar-scanner"
           }
         }
