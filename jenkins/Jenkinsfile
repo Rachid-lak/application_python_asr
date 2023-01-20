@@ -2,7 +2,7 @@ pipeline{
 agent none   
 stages{
   
-    stage('SonarQube Analysis') {
+   /* stage('SonarQube Analysis') {
      agent any
        steps{
       
@@ -10,7 +10,19 @@ stages{
        sh "${SonarQubeScanner}/var/jenkins_home/sonar-scanner"
           }
         }
+        }*/
+
+stage('SonarQube Analysis') {
+            steps {
+                script {
+                    def scannerHome = tool 'SonarQubeScanner'
+                    withSonarQubeEnv() {
+                        sh "${scannerHome}/bin/sonar-scanner"
+                    }
+                }
+            }
         }
+
    }
     
 }
