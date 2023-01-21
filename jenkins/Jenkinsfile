@@ -12,9 +12,13 @@ stages{
         }
         }*/
 
-stage('SCM') {
-    checkout scm
-  }
+       stage('SCM') {
+         step{
+            script{   
+              checkout scm
+             }
+          }
+       }
 stage('SonarQube Analysis') {
             steps {
                 script {
