@@ -13,13 +13,13 @@ stages{
         }*/
 
        stage('SCM') {
-         step{
-            script{   
+         steps {
+            script {   
               checkout scm
              }
           }
        }
-stage('SonarQube Analysis') {
+         stage('SonarQube Analysis') {
             steps {
                 script {
                     def scannerHome = tool 'SonarQubeScanner'
