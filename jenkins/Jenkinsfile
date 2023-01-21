@@ -24,7 +24,10 @@ stages{
                 script {
                     def scannerHome = tool 'SonarQubeScanner'
                     withSonarQubeEnv() {
-                        sh "${scannerHome}/sonar-scanner"
+                        sh "${scannerHome}/sonar-scanner \
+  -Dsonar.projectKey=python \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://172.17.0.2:9000/"
                     }
                 }
             }
