@@ -14,7 +14,7 @@ stages{
 stage('compose') {
          steps {
             script {
-              sh "docker-compose run -d"
+              sh "docker-compose up -d"
              }
           }
        }
