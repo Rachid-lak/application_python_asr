@@ -11,15 +11,18 @@ stages{
           }
         }
         }*/
-stage('compose') {
-         steps {
-            script {
-              sh "docker-compose up -d"
-             }
-          }
-       }
+   stage ("docker compose"){
+      steps {
+
+		sh "sudo docker-compose up -d "
+
+         
+
+ } 
 
 
+
+}
        stage('SCM') {
          steps {
             script {   
