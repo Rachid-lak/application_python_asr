@@ -18,7 +18,7 @@ stages{
                 script {
                     def scannerHome = tool 'sonar-runner'
                     withSonarQubeEnv() {
-                        sh "${scannerHome}/sonar-runner \
+                        sh "${scannerHome}/sonar-runner"
 
                     }
                 }
