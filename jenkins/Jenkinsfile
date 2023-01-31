@@ -27,7 +27,7 @@ stages{
                         sh "${scannerHome}/sonar-runner \
   -Dsonar.projectKey=python \
   -Dsonar.sources=. \
-  -Dsonar.host.url=http://127.0.0.1:9000
+  -Dsonar.host.url=http://127.0.0.1:9000/sonar
                     }
                 }
             }
