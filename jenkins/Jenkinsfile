@@ -22,7 +22,7 @@ stages{
          stage('SonarQube Analysis') {
             steps {
                 script {
-                    def scannerHome = tool 'sonnar-runner'
+                    def scannerHome = tool 'sonar-runner'
                     withSonarQubeEnv() {
                         sh "${scannerHome}/sonar-runner \
   -Dsonar.projectKey=python \
